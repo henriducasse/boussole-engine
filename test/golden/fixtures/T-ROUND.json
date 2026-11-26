@@ -1,0 +1,18 @@
+{
+  "id": "T-ROUND",
+  "kind": "round",
+  "doc": "SPEC.md - Arrondi et heure de bascule",
+  "cases": [
+    { "celsius": 36.5, "expect": 36.5 },
+    { "celsius": 36.5, "expect": 36.5 },
+    { "celsius": 36.52, "expect": 36.5 },
+    { "celsius": 36.525, "expect": 36.55 },
+    { "celsius": 36.574, "expect": 36.55 },
+    { "celsius": 36.575, "expect": 36.6 },
+    { "celsius": 36.0, "expect": 36.0 },
+    { "celsius": 37.12, "expect": 37.1 },
+    { "celsius": 37.13, "expect": 37.15 },
+    { "celsius": 35.0, "expect": 35.0 },
+    { "celsius": 38.5, "expect": 38.5 }
+  ]
+}

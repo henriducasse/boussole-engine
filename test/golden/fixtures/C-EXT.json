@@ -1,0 +1,30 @@
+{
+  "id": "C-EXT",
+  "kind": "evaluate",
+  "doc": "SPEC.md - Variante col utérin : un col ouvert ou souple après les trois jours, avant la fin de l'évaluation de température, invalide le pic (trace C-EXT).",
+  "secondarySymptom": "cervix",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4, "cervix": { "opening": 1, "firmness": 1 } },
+    { "day": 2, "temperature": 36.4, "cervix": { "opening": 2, "firmness": 1 } },
+    { "day": 3, "temperature": 36.45, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 4, "temperature": 36.5, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 5, "temperature": 36.45, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 6, "temperature": 36.4, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 7, "temperature": 36.55, "cervix": { "opening": 1, "firmness": 1 } },
+    { "day": 8, "temperature": 36.55, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 9, "temperature": 36.7, "cervix": { "opening": 0, "firmness": 0 } }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": {
+      "detected": true,
+      "evaluationCompleteDay": 9
+    },
+    "secondaryShift": {
+      "kind": "cervix",
+      "detected": false
+    },
+    "phases": { "postOvulatory": null },
+    "trace": [{ "ruleId": "C-EXT", "day": 7, "detail": "pic invalidé" }]
+  }
+}

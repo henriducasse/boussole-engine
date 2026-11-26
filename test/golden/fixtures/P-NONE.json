@@ -1,0 +1,15 @@
+{
+  "id": "P-NONE",
+  "kind": "evaluate",
+  "doc": "SPEC.md - La phase pré-ovulatoire",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4 },
+    { "day": 2, "temperature": 36.4 },
+    { "day": 3, "temperature": 36.4 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "phases": { "preOvulatory": null }
+  }
+}

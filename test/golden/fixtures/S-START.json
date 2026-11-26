@@ -1,0 +1,18 @@
+{
+  "id": "S-START",
+  "kind": "cycle-starts",
+  "doc": "docs/contrat-moteur.md §6 - S-START",
+  "days": [
+    { "day": 1, "bleeding": 2 },
+    { "day": 2, "bleeding": 3 },
+    { "day": 3, "bleeding": 1 },
+    { "day": 4 },
+    { "day": 5 },
+    { "day": 14, "bleeding": 0 },
+    { "day": 16, "bleeding": 2 },
+    { "day": 28, "bleeding": 2 }
+  ],
+  "expect": {
+    "starts": [1, 28]
+  }
+}

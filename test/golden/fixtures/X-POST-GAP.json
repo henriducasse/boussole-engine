@@ -1,0 +1,79 @@
+{
+  "id": "X-POST-GAP",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 ter - surveillance post-ovulatoire X-POST (issue #86, règle propre à Boussole)",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 2,
+      "temperature": 36.4,
+      "mucus": 2
+    },
+    {
+      "day": 3,
+      "temperature": 36.45,
+      "mucus": 4
+    },
+    {
+      "day": 4,
+      "temperature": 36.5,
+      "mucus": 3
+    },
+    {
+      "day": 5,
+      "temperature": 36.45,
+      "mucus": 2
+    },
+    {
+      "day": 6,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 7,
+      "temperature": 36.55,
+      "mucus": 1
+    },
+    {
+      "day": 8,
+      "temperature": 36.55,
+      "mucus": 1
+    },
+    {
+      "day": 9,
+      "temperature": 36.7,
+      "mucus": 1
+    },
+    {
+      "day": 10,
+      "temperature": 36.7
+    },
+    {
+      "day": 11,
+      "mucus": 1
+    }
+  ],
+  "expect": {
+    "evaluable": true,
+    "phases": {
+      "postOvulatory": {
+        "startDay": 9,
+        "uncertainDays": [
+          10
+        ]
+      }
+    },
+    "warnings": [
+      {
+        "code": "post_ovulatory_day_unknown",
+        "day": 10
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "PROGRESS-A1-LIGNE",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 bis - situations-analyse-2026-09-25.md - A1-LIGNE",
+  "situation": "Six relevés étalés sur plus de 9 jours au J11 : ligne refusée.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4
+    },
+    {
+      "day": 2,
+      "temperature": 36.3
+    },
+    {
+      "day": 3,
+      "temperature": 36.35
+    },
+    {
+      "day": 4,
+      "temperature": 36.4
+    },
+    {
+      "day": 5,
+      "temperature": 36.3
+    },
+    {
+      "day": 6,
+      "temperature": 36.35
+    },
+    {
+      "day": 7
+    },
+    {
+      "day": 8
+    },
+    {
+      "day": 9
+    },
+    {
+      "day": 10
+    },
+    {
+      "day": 11,
+      "temperature": 36.35
+    },
+    {
+      "day": 12,
+      "temperature": 36.4
+    }
+  ],
+  "expect": {
+    "evaluable": false,
+    "reasons": [
+      {
+        "code": "insufficient_low_readings",
+        "day": 11
+      }
+    ],
+    "progress": {
+      "temperature": {
+        "state": "refused",
+        "baseline": {
+          "forDay": 11,
+          "state": "spread",
+          "readings": [
+            {
+              "day": 1,
+              "celsius": 36.4
+            },
+            {
+              "day": 2,
+              "celsius": 36.3
+            },
+            {
+              "day": 3,
+              "celsius": 36.35
+            },
+            {
+              "day": 4,
+              "celsius": 36.4
+            },
+            {
+              "day": 5,
+              "celsius": 36.3
+            },
+            {
+              "day": 6,
+              "celsius": 36.35
+            }
+          ],
+          "windowMax": 9
+        },
+        "count": null,
+        "history": []
+      },
+      "secondary": null
+    }
+  }
+}

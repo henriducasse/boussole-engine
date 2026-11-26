@@ -1,0 +1,243 @@
+{
+  "id": "T-LONG-X",
+  "kind": "evaluate",
+  "doc": "SPEC.md - Cycle de 42 jours, glaire observée chaque jour. LTL du premier point haut = maximum des 6 relevés qui précèdent (J25-J30 = 36,4 °C). J31 et J32 (36,45 °C) sont strictement au-dessus, J33 (36,6 °C) est à ≥ 0,2 °C : règle standard confirmée le soir du J33. Pic de glaire = dernier jour de qualité 4 (J29), suivi de trois jours strictement inférieurs (J30-J32) sans retour ≥ 4 jusqu’à la fin de l’évaluation de température. Phase post-ovulatoire à 18h00 le jour le plus tardif des deux signes (J33). Pas de cycle précédent à hausse confirmée : pas de phase pré-ovulatoire.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 2,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 3,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 4,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 5,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 6,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 7,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 8,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 9,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 10,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 11,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 12,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 13,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 14,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 15,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 16,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 17,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 18,
+      "temperature": 36.4,
+      "mucus": 1
+    },
+    {
+      "day": 19,
+      "temperature": 36.4,
+      "mucus": 2
+    },
+    {
+      "day": 20,
+      "temperature": 36.4,
+      "mucus": 2
+    },
+    {
+      "day": 21,
+      "temperature": 36.4,
+      "mucus": 2
+    },
+    {
+      "day": 22,
+      "temperature": 36.4,
+      "mucus": 2
+    },
+    {
+      "day": 23,
+      "temperature": 36.4,
+      "mucus": 3
+    },
+    {
+      "day": 24,
+      "temperature": 36.4,
+      "mucus": 3
+    },
+    {
+      "day": 25,
+      "temperature": 36.4,
+      "mucus": 3
+    },
+    {
+      "day": 26,
+      "temperature": 36.4,
+      "mucus": 4
+    },
+    {
+      "day": 27,
+      "temperature": 36.4,
+      "mucus": 4
+    },
+    {
+      "day": 28,
+      "temperature": 36.4,
+      "mucus": 4
+    },
+    {
+      "day": 29,
+      "temperature": 36.4,
+      "mucus": 4
+    },
+    {
+      "day": 30,
+      "temperature": 36.4,
+      "mucus": 3
+    },
+    {
+      "day": 31,
+      "temperature": 36.45,
+      "mucus": 2
+    },
+    {
+      "day": 32,
+      "temperature": 36.45,
+      "mucus": 1
+    },
+    {
+      "day": 33,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 34,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 35,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 36,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 37,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 38,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 39,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 40,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 41,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 42,
+      "temperature": 36.6,
+      "mucus": 1
+    }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": {
+      "detected": true,
+      "ruleId": "T-STD",
+      "ltl": 36.4,
+      "firstHighDay": 31,
+      "evaluationCompleteDay": 33
+    },
+    "secondaryShift": {
+      "kind": "mucus",
+      "ruleId": "M-PEAK",
+      "detected": true,
+      "peakDay": 29,
+      "evaluationCompleteDay": 32
+    },
+    "phases": {
+      "preOvulatory": null,
+      "postOvulatory": {
+        "startDay": 33,
+        "time": "18:00"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "C-PEAK-POST",
+  "kind": "evaluate",
+  "doc": "SPEC.md - La double vérification croisée / Variante col utérin : « aucun col ouvert ou souple ne doit réapparaître avant la fin de l'évaluation de température ». findPeak du col est borné par tempCompleteDay ; un col ré-ouvert après (jour 10) n'invalide pas le pic du jour 6.",
+  "secondarySymptom": "cervix",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 2, "temperature": 36.4, "cervix": { "opening": 1, "firmness": 1 } },
+    { "day": 3, "temperature": 36.45, "cervix": { "opening": 2, "firmness": 1 } },
+    { "day": 4, "temperature": 36.5, "cervix": { "opening": 2, "firmness": 1 } },
+    { "day": 5, "temperature": 36.45, "cervix": { "opening": 1, "firmness": 1 } },
+    { "day": 6, "temperature": 36.4, "cervix": { "opening": 1, "firmness": 0 } },
+    { "day": 7, "temperature": 36.55, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 8, "temperature": 36.55, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 9, "temperature": 36.7, "cervix": { "opening": 0, "firmness": 0 } },
+    { "day": 10, "temperature": 36.7, "cervix": { "opening": 1, "firmness": 1 } }
+  ],
+  "expect": {
+    "evaluable": true,
+    "secondaryShift": {
+      "kind": "cervix",
+      "ruleId": "C-PEAK",
+      "peakDay": 6,
+      "evaluationCompleteDay": 9
+    },
+    "phases": {
+      "postOvulatory": { "startDay": 9, "time": "18:00" }
+    }
+  }
+}

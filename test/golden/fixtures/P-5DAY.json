@@ -1,0 +1,39 @@
+{
+  "id": "P-5DAY",
+  "kind": "evaluate",
+  "doc": "SPEC.md - Règle par défaut : 5 jours",
+  "secondarySymptom": "mucus",
+  "previousCycles": [
+    [
+      { "day": 1, "bleeding": 2, "temperature": 36.4 },
+      { "day": 2, "temperature": 36.4 },
+      { "day": 3, "temperature": 36.4 },
+      { "day": 4, "temperature": 36.4 },
+      { "day": 5, "temperature": 36.4 },
+      { "day": 6, "temperature": 36.4 },
+      { "day": 7, "temperature": 36.4 },
+      { "day": 8, "temperature": 36.4 },
+      { "day": 9, "temperature": 36.4 },
+      { "day": 10, "temperature": 36.4 },
+      { "day": 11, "temperature": 36.4 },
+      { "day": 12, "temperature": 36.4 },
+      { "day": 13, "temperature": 36.55 },
+      { "day": 14, "temperature": 36.55 },
+      { "day": 15, "temperature": 36.7 }
+    ]
+  ],
+  "days": [
+    { "day": 1, "bleeding": 2, "mucus": 1 },
+    { "day": 2, "mucus": 1 },
+    { "day": 3, "mucus": 1 },
+    { "day": 4, "mucus": 1 },
+    { "day": 5, "mucus": 1 },
+    { "day": 6, "mucus": 1 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "phases": {
+      "preOvulatory": { "startDay": 1, "endDay": 5, "ruleId": "P-5DAY" }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "T-EX1",
+  "kind": "evaluate",
+  "doc": "SPEC.md - Exception n°1",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4 },
+    { "day": 2, "temperature": 36.45 },
+    { "day": 3, "temperature": 36.5 },
+    { "day": 4, "temperature": 36.5 },
+    { "day": 5, "temperature": 36.45 },
+    { "day": 6, "temperature": 36.4 },
+    { "day": 7, "temperature": 36.55 },
+    { "day": 8, "temperature": 36.55 },
+    { "day": 9, "temperature": 36.55 },
+    { "day": 10, "temperature": 36.55 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": {
+      "detected": true,
+      "ruleId": "T-EX1",
+      "ltl": 36.5,
+      "firstHighDay": 7,
+      "evaluationCompleteDay": 10
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "PROGRESS-B2-CONSTRUCTION",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 bis - situations-analyse-2026-09-25.md - B2-CONSTRUCTION",
+  "situation": "Moins de six relevés : ligne en construction.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4
+    },
+    {
+      "day": 2,
+      "temperature": 36.3
+    },
+    {
+      "day": 3,
+      "temperature": 36.35
+    },
+    {
+      "day": 4,
+      "temperature": 36.4
+    }
+  ],
+  "expect": {
+    "progress": {
+      "temperature": {
+        "state": "collecting",
+        "baseline": {
+          "forDay": 4,
+          "state": "building",
+          "readings": [
+            {
+              "day": 1,
+              "celsius": 36.4
+            },
+            {
+              "day": 2,
+              "celsius": 36.3
+            },
+            {
+              "day": 3,
+              "celsius": 36.35
+            }
+          ],
+          "windowMax": 9
+        },
+        "count": null,
+        "history": []
+      },
+      "secondary": {
+        "kind": "mucus",
+        "state": "noPeak",
+        "peakSearchUntil": 4,
+        "peakSearchClosed": false,
+        "marks": []
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "PROGRESS-D1-GL-AVANT-MANQUE",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 bis - situations-analyse-2026-09-25.md - D1-GL-AVANT-MANQUE",
+  "situation": "Pic de glaire au J10, J12 sans glaire, hausse pas encore là : la température reste racontée.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4
+    },
+    {
+      "day": 2,
+      "temperature": 36.3
+    },
+    {
+      "day": 3,
+      "temperature": 36.35
+    },
+    {
+      "day": 4,
+      "temperature": 36.4
+    },
+    {
+      "day": 5,
+      "temperature": 36.3
+    },
+    {
+      "day": 6,
+      "temperature": 36.35
+    },
+    {
+      "day": 7,
+      "temperature": 36.3
+    },
+    {
+      "day": 8,
+      "temperature": 36.35
+    },
+    {
+      "day": 9,
+      "temperature": 36.4
+    },
+    {
+      "day": 10,
+      "temperature": 36.3,
+      "mucus": 3
+    },
+    {
+      "day": 11,
+      "temperature": 36.35,
+      "mucus": 1
+    },
+    {
+      "day": 12,
+      "temperature": 36.4
+    },
+    {
+      "day": 13,
+      "temperature": 36.5
+    },
+    {
+      "day": 14,
+      "temperature": 36.55
+    }
+  ],
+  "expect": {
+    "evaluable": false,
+    "reasons": [
+      {
+        "code": "gap_in_confirmation_window",
+        "day": 12
+      }
+    ],
+    "progress": {
+      "temperature": {
+        "state": "counting",
+        "count": {
+          "firstHighDay": 13,
+          "outcome": "open",
+          "next": 3
+        }
+      },
+      "secondary": {
+        "kind": "mucus",
+        "state": "stopped",
+        "peakDay": 10,
+        "peakSearchUntil": 14,
+        "peakSearchClosed": false,
+        "marks": [
+          {
+            "mark": 1,
+            "day": 11,
+            "state": "lower"
+          },
+          {
+            "mark": 2,
+            "day": 12,
+            "state": "missing"
+          },
+          {
+            "mark": 3,
+            "day": 13,
+            "state": "notNeeded"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "M-EXT",
+  "kind": "evaluate",
+  "doc": "SPEC.md - La double vérification croisée : une glaire ≥ pic après les trois jours, avant la fin de l'évaluation de température, invalide le pic (trace M-EXT).",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4, "mucus": 1 },
+    { "day": 2, "temperature": 36.4, "mucus": 2 },
+    { "day": 3, "temperature": 36.45, "mucus": 4 },
+    { "day": 4, "temperature": 36.5, "mucus": 3 },
+    { "day": 5, "temperature": 36.45, "mucus": 2 },
+    { "day": 6, "temperature": 36.4, "mucus": 1 },
+    { "day": 7, "temperature": 36.55, "mucus": 1 },
+    { "day": 8, "temperature": 36.55, "mucus": 4 },
+    { "day": 9, "temperature": 36.7, "mucus": 1 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": {
+      "detected": true,
+      "firstHighDay": 7,
+      "evaluationCompleteDay": 9
+    },
+    "secondaryShift": {
+      "kind": "mucus",
+      "detected": false
+    },
+    "phases": { "postOvulatory": null },
+    "trace": [{ "ruleId": "M-EXT", "day": 8, "detail": "pic invalidé" }]
+  }
+}

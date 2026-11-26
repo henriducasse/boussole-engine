@@ -1,0 +1,23 @@
+{
+  "id": "X-BLOCK",
+  "kind": "evaluate",
+  "doc": "SPEC.md - Combiner les deux signes",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4, "mucus": 1 },
+    { "day": 2, "temperature": 36.4, "mucus": 1 },
+    { "day": 3, "temperature": 36.45, "mucus": 1 },
+    { "day": 4, "temperature": 36.5, "mucus": 1 },
+    { "day": 5, "temperature": 36.45, "mucus": 1 },
+    { "day": 6, "temperature": 36.4, "mucus": 1 },
+    { "day": 7, "temperature": 36.55, "mucus": 1 },
+    { "day": 8, "temperature": 36.55, "mucus": 1 },
+    { "day": 9, "temperature": 36.7, "mucus": 1 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": { "detected": true, "ruleId": "T-STD" },
+    "secondaryShift": { "detected": false },
+    "phases": { "postOvulatory": null }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "T-LTL",
+  "kind": "evaluate",
+  "doc": "SPEC.md - La ligne de base (LTL)",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4 },
+    { "day": 2, "temperature": 36.4 },
+    { "day": 3, "temperature": 36.45 },
+    { "day": 4, "temperature": 36.55 },
+    { "day": 5, "temperature": 36.5 },
+    { "day": 6, "temperature": 36.4 },
+    { "day": 7, "temperature": 36.6 },
+    { "day": 8, "temperature": 36.6 },
+    { "day": 9, "temperature": 36.8 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": {
+      "detected": true,
+      "ruleId": "T-STD",
+      "ltl": 36.55,
+      "firstHighDay": 7,
+      "evaluationCompleteDay": 9
+    }
+  }
+}

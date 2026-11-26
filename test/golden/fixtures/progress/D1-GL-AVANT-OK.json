@@ -1,0 +1,98 @@
+{
+  "id": "PROGRESS-D1-GL-AVANT-OK",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 bis - situations-analyse-2026-09-25.md - D1-GL-AVANT-OK",
+  "situation": "Glaire confirmée avant la hausse ; le pic peut encore bouger.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4
+    },
+    {
+      "day": 2,
+      "temperature": 36.3
+    },
+    {
+      "day": 3,
+      "temperature": 36.35
+    },
+    {
+      "day": 4,
+      "temperature": 36.4
+    },
+    {
+      "day": 5,
+      "temperature": 36.3
+    },
+    {
+      "day": 6,
+      "temperature": 36.35
+    },
+    {
+      "day": 7,
+      "temperature": 36.3
+    },
+    {
+      "day": 8,
+      "temperature": 36.35,
+      "mucus": 4
+    },
+    {
+      "day": 9,
+      "temperature": 36.4,
+      "mucus": 2
+    },
+    {
+      "day": 10,
+      "temperature": 36.3,
+      "mucus": 1
+    },
+    {
+      "day": 11,
+      "temperature": 36.35,
+      "mucus": 1
+    },
+    {
+      "day": 12,
+      "temperature": 36.4
+    }
+  ],
+  "expect": {
+    "secondaryShift": {
+      "detected": true,
+      "peakDay": 8,
+      "evaluationCompleteDay": 11
+    },
+    "progress": {
+      "temperature": {
+        "state": "collecting"
+      },
+      "secondary": {
+        "kind": "mucus",
+        "state": "confirmed",
+        "peakDay": 8,
+        "peakSearchUntil": 12,
+        "peakSearchClosed": false,
+        "marks": [
+          {
+            "mark": 1,
+            "day": 9,
+            "state": "lower"
+          },
+          {
+            "mark": 2,
+            "day": 10,
+            "state": "lower"
+          },
+          {
+            "mark": 3,
+            "day": 11,
+            "state": "lower"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@boussole/engine",
+  "version": "0.1.0",
+  "description": "Moteur de calcul basé sur l'étude des symptômes (double vérification température + signe secondaire), fonctions pures, zéro dépendance.",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "test",
+    "RULES.md",
+    "SPEC.md",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "devDependencies": {
+    "fast-check": "^4.10.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriducasse/boussole-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/henriducasse/boussole-engine/issues"
+  },
+  "homepage": "https://boussolecycle.com/"
+}

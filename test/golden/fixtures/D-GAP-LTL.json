@@ -1,0 +1,22 @@
+{
+  "id": "D-GAP-LTL",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §7 - LTL dans ltlWindowMaxDays",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4 },
+    { "day": 2, "temperature": 36.4 },
+    { "day": 3, "temperature": 36.4 },
+    { "day": 4, "temperature": 36.4 },
+    { "day": 5, "temperature": 36.4 },
+    { "day": 10, "temperature": 36.4 },
+    { "day": 11, "temperature": 36.6 },
+    { "day": 12, "temperature": 36.6 },
+    { "day": 13, "temperature": 36.8 }
+  ],
+  "expect": {
+    "evaluable": false,
+    "reasons": [{ "code": "insufficient_low_readings", "ruleId": "D-GAP-LTL" }],
+    "phases": { "preOvulatory": null, "postOvulatory": null }
+  }
+}

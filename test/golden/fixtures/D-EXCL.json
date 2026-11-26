@@ -1,0 +1,27 @@
+{
+  "id": "D-EXCL",
+  "kind": "evaluate",
+  "doc": "SPEC.md - Perturbation (parenthèses)",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4 },
+    { "day": 2, "temperature": 36.4 },
+    { "day": 3, "temperature": 36.45 },
+    { "day": 4, "temperature": { "celsius": 36.9, "excluded": true } },
+    { "day": 5, "temperature": 36.45 },
+    { "day": 6, "temperature": 36.4 },
+    { "day": 7, "temperature": 36.4 },
+    { "day": 8, "temperature": 36.55 },
+    { "day": 9, "temperature": 36.55 },
+    { "day": 10, "temperature": 36.7 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": {
+      "detected": true,
+      "ruleId": "T-STD",
+      "ltl": 36.45,
+      "firstHighDay": 8
+    }
+  }
+}

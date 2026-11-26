@@ -1,0 +1,122 @@
+{
+  "id": "PROGRESS-D2-CE-SOIR",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 bis - situations-analyse-2026-09-25.md - D2-CE-SOIR",
+  "situation": "Hausse au J15, glaire confirmée au J17 : post-ovulatoire ce soir.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4
+    },
+    {
+      "day": 2,
+      "temperature": 36.3
+    },
+    {
+      "day": 3,
+      "temperature": 36.35
+    },
+    {
+      "day": 4,
+      "temperature": 36.4
+    },
+    {
+      "day": 5,
+      "temperature": 36.3
+    },
+    {
+      "day": 6,
+      "temperature": 36.35
+    },
+    {
+      "day": 7,
+      "temperature": 36.3
+    },
+    {
+      "day": 8,
+      "temperature": 36.35
+    },
+    {
+      "day": 9,
+      "temperature": 36.4
+    },
+    {
+      "day": 10,
+      "temperature": 36.3
+    },
+    {
+      "day": 11,
+      "temperature": 36.35
+    },
+    {
+      "day": 12,
+      "temperature": 36.4
+    },
+    {
+      "day": 13,
+      "temperature": 36.5
+    },
+    {
+      "day": 14,
+      "temperature": 36.55,
+      "mucus": 4
+    },
+    {
+      "day": 15,
+      "temperature": 36.65,
+      "mucus": 1
+    },
+    {
+      "day": 16,
+      "temperature": 36.6,
+      "mucus": 1
+    },
+    {
+      "day": 17,
+      "temperature": 36.6,
+      "mucus": 0
+    }
+  ],
+  "expect": {
+    "phases": {
+      "postOvulatory": {
+        "startDay": 17
+      }
+    },
+    "progress": {
+      "temperature": {
+        "state": "confirmed",
+        "count": {
+          "outcome": "confirmed",
+          "endDay": 15
+        }
+      },
+      "secondary": {
+        "kind": "mucus",
+        "state": "confirmed",
+        "peakDay": 14,
+        "peakSearchUntil": 15,
+        "peakSearchClosed": true,
+        "marks": [
+          {
+            "mark": 1,
+            "day": 15,
+            "state": "lower"
+          },
+          {
+            "mark": 2,
+            "day": 16,
+            "state": "lower"
+          },
+          {
+            "mark": 3,
+            "day": 17,
+            "state": "lower"
+          }
+        ]
+      }
+    }
+  }
+}

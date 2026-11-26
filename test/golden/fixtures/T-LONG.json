@@ -1,0 +1,48 @@
+{
+  "id": "T-LONG",
+  "kind": "evaluate",
+  "doc": "SPEC.md - LTL + règle standard. Le document ne borne pas le jour du candidat (un relevé devient candidat dès qu’il dépasse strictement la LTL, après au moins six relevés déjà enregistrés) ; cette fixture de 30 jours avec hausse confirmée au jour 20 le vérifie. La validation clinique attend la conseillère qualifiée de la méthode.",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4 },
+    { "day": 2, "temperature": 36.4 },
+    { "day": 3, "temperature": 36.4 },
+    { "day": 4, "temperature": 36.4 },
+    { "day": 5, "temperature": 36.4 },
+    { "day": 6, "temperature": 36.4 },
+    { "day": 7, "temperature": 36.4 },
+    { "day": 8, "temperature": 36.4 },
+    { "day": 9, "temperature": 36.4 },
+    { "day": 10, "temperature": 36.4 },
+    { "day": 11, "temperature": 36.4 },
+    { "day": 12, "temperature": 36.4 },
+    { "day": 13, "temperature": 36.4 },
+    { "day": 14, "temperature": 36.4 },
+    { "day": 15, "temperature": 36.4 },
+    { "day": 16, "temperature": 36.4 },
+    { "day": 17, "temperature": 36.4 },
+    { "day": 18, "temperature": 36.4 },
+    { "day": 19, "temperature": 36.4 },
+    { "day": 20, "temperature": 36.45 },
+    { "day": 21, "temperature": 36.45 },
+    { "day": 22, "temperature": 36.6 },
+    { "day": 23, "temperature": 36.6 },
+    { "day": 24, "temperature": 36.6 },
+    { "day": 25, "temperature": 36.6 },
+    { "day": 26, "temperature": 36.6 },
+    { "day": 27, "temperature": 36.6 },
+    { "day": 28, "temperature": 36.6 },
+    { "day": 29, "temperature": 36.6 },
+    { "day": 30, "temperature": 36.6 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "temperatureShift": {
+      "detected": true,
+      "ruleId": "T-STD",
+      "ltl": 36.4,
+      "firstHighDay": 20,
+      "evaluationCompleteDay": 22
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "PROGRESS-D1-GL-J1",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 bis - situations-analyse-2026-09-25.md - D1-GL-J1",
+  "situation": "Hausse au J15, pic au J14, Jour 1 de glaire plus bas.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4
+    },
+    {
+      "day": 2,
+      "temperature": 36.3
+    },
+    {
+      "day": 3,
+      "temperature": 36.35
+    },
+    {
+      "day": 4,
+      "temperature": 36.4
+    },
+    {
+      "day": 5,
+      "temperature": 36.3
+    },
+    {
+      "day": 6,
+      "temperature": 36.35
+    },
+    {
+      "day": 7,
+      "temperature": 36.3
+    },
+    {
+      "day": 8,
+      "temperature": 36.35
+    },
+    {
+      "day": 9,
+      "temperature": 36.4
+    },
+    {
+      "day": 10,
+      "temperature": 36.3
+    },
+    {
+      "day": 11,
+      "temperature": 36.35
+    },
+    {
+      "day": 12,
+      "temperature": 36.4
+    },
+    {
+      "day": 13,
+      "temperature": 36.5
+    },
+    {
+      "day": 14,
+      "temperature": 36.55,
+      "mucus": 4
+    },
+    {
+      "day": 15,
+      "temperature": 36.65,
+      "mucus": 1
+    }
+  ],
+  "expect": {
+    "progress": {
+      "temperature": {
+        "state": "confirmed"
+      },
+      "secondary": {
+        "kind": "mucus",
+        "state": "counting",
+        "peakDay": 14,
+        "peakSearchUntil": 15,
+        "peakSearchClosed": true,
+        "marks": [
+          {
+            "mark": 1,
+            "day": 15,
+            "state": "lower"
+          },
+          {
+            "mark": 2,
+            "day": 16,
+            "state": "upcoming"
+          },
+          {
+            "mark": 3,
+            "day": 17,
+            "state": "upcoming"
+          }
+        ]
+      }
+    }
+  }
+}

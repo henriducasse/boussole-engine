@@ -1,0 +1,152 @@
+{
+  "id": "PROGRESS-C1-J2-HAUT",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §2 bis - situations-analyse-2026-09-25.md - C1-J2-HAUT",
+  "situation": "Jours 1 et 2 au-dessus.",
+  "secondarySymptom": "mucus",
+  "days": [
+    {
+      "day": 1,
+      "bleeding": 2,
+      "temperature": 36.4
+    },
+    {
+      "day": 2,
+      "temperature": 36.3
+    },
+    {
+      "day": 3,
+      "temperature": 36.35
+    },
+    {
+      "day": 4,
+      "temperature": 36.4
+    },
+    {
+      "day": 5,
+      "temperature": 36.3
+    },
+    {
+      "day": 6,
+      "temperature": 36.35
+    },
+    {
+      "day": 7,
+      "temperature": 36.3
+    },
+    {
+      "day": 8,
+      "temperature": 36.35
+    },
+    {
+      "day": 9,
+      "temperature": 36.4
+    },
+    {
+      "day": 10,
+      "temperature": 36.3
+    },
+    {
+      "day": 11,
+      "temperature": 36.35
+    },
+    {
+      "day": 12,
+      "temperature": 36.4
+    },
+    {
+      "day": 13,
+      "temperature": 36.5
+    },
+    {
+      "day": 14,
+      "temperature": 36.55
+    }
+  ],
+  "expect": {
+    "progress": {
+      "temperature": {
+        "state": "counting",
+        "baseline": null,
+        "count": {
+          "firstHighDay": 13,
+          "ltl": 36.4,
+          "ltlReadings": [
+            {
+              "day": 7,
+              "celsius": 36.3
+            },
+            {
+              "day": 8,
+              "celsius": 36.35
+            },
+            {
+              "day": 9,
+              "celsius": 36.4
+            },
+            {
+              "day": 10,
+              "celsius": 36.3
+            },
+            {
+              "day": 11,
+              "celsius": 36.35
+            },
+            {
+              "day": 12,
+              "celsius": 36.4
+            }
+          ],
+          "rule": "T-STD",
+          "outcome": "open",
+          "endDay": null,
+          "next": 3,
+          "marks": [
+            {
+              "mark": 1,
+              "day": 13,
+              "state": "above",
+              "celsius": 36.5,
+              "target": {
+                "op": ">",
+                "celsius": 36.4
+              },
+              "met": true
+            },
+            {
+              "mark": 2,
+              "day": 14,
+              "state": "above",
+              "celsius": 36.55,
+              "target": {
+                "op": ">",
+                "celsius": 36.4
+              },
+              "met": true
+            },
+            {
+              "mark": 3,
+              "day": 15,
+              "state": "upcoming",
+              "celsius": null,
+              "target": {
+                "op": ">=",
+                "celsius": 36.6
+              },
+              "met": null
+            },
+            {
+              "mark": 4,
+              "day": 16,
+              "state": "optional",
+              "celsius": null,
+              "target": null,
+              "met": null
+            }
+          ]
+        },
+        "history": []
+      }
+    }
+  }
+}

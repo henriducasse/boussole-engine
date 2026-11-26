@@ -1,0 +1,30 @@
+{
+  "id": "iiiibii",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §9 - sans glaire applicable, P-5DAY n’accorde pas de fenêtre pré-ovulatoire (0 jour infertile, inévaluable)",
+  "secondarySymptom": "mucus",
+  "previousCycles": [
+    [
+      { "day": 1, "bleeding": 2 },
+      { "day": 6, "temperature": 35 },
+      { "day": 7, "temperature": 35 },
+      { "day": 8, "temperature": 35 },
+      { "day": 9, "temperature": 35 },
+      { "day": 10, "temperature": 35 },
+      { "day": 11, "temperature": 35 },
+      { "day": 13, "temperature": 35.05 },
+      { "day": 14, "temperature": 35.05 },
+      { "day": 15, "temperature": 35.2 }
+    ]
+  ],
+  "days": [
+    { "day": 1, "bleeding": 2 },
+    { "day": 16 }
+  ],
+  "expect": {
+    "evaluable": false,
+    "phases": { "preOvulatory": null, "postOvulatory": null },
+    "reasons": [{ "code": "ungrounded_preovulatory", "ruleId": "P-5DAY", "day": 1 }],
+    "trace": [{ "ruleId": "P-5DAY", "day": 1 }]
+  }
+}

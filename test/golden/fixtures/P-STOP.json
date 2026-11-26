@@ -1,0 +1,40 @@
+{
+  "id": "P-STOP",
+  "kind": "evaluate",
+  "doc": "SPEC.md - Arrêt immédiat sur signe fertile : la trace P-STOP a pour day le jour du signe (glaire ≥ 2), pas le dernier jour de la fenêtre.",
+  "secondarySymptom": "mucus",
+  "previousCycles": [
+    [
+      { "day": 1, "bleeding": 2, "temperature": 36.4 },
+      { "day": 2, "temperature": 36.4 },
+      { "day": 3, "temperature": 36.4 },
+      { "day": 4, "temperature": 36.4 },
+      { "day": 5, "temperature": 36.4 },
+      { "day": 6, "temperature": 36.4 },
+      { "day": 7, "temperature": 36.4 },
+      { "day": 8, "temperature": 36.4 },
+      { "day": 9, "temperature": 36.4 },
+      { "day": 10, "temperature": 36.4 },
+      { "day": 11, "temperature": 36.4 },
+      { "day": 12, "temperature": 36.4 },
+      { "day": 13, "temperature": 36.55 },
+      { "day": 14, "temperature": 36.55 },
+      { "day": 15, "temperature": 36.7 }
+    ]
+  ],
+  "days": [
+    { "day": 1, "bleeding": 2, "mucus": 1 },
+    { "day": 2, "mucus": 1 },
+    { "day": 3, "mucus": 2 },
+    { "day": 4, "mucus": 3 },
+    { "day": 5, "mucus": 3 }
+  ],
+  "expect": {
+    "evaluable": true,
+    "phases": {
+      "preOvulatory": { "startDay": 1, "endDay": 2, "ruleId": "P-STOP" }
+    },
+    "warnings": [{ "code": "preovu_stopped_by_fertile_sign", "day": 3 }],
+    "trace": [{ "ruleId": "P-STOP", "day": 3 }]
+  }
+}

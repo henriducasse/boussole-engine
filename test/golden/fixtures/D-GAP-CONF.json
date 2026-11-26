@@ -1,0 +1,23 @@
+{
+  "id": "D-GAP-CONF",
+  "kind": "evaluate",
+  "doc": "docs/contrat-moteur.md §7 - fenêtre de confirmation stricte",
+  "secondarySymptom": "mucus",
+  "days": [
+    { "day": 1, "bleeding": 2, "temperature": 36.4 },
+    { "day": 2, "temperature": 36.4 },
+    { "day": 3, "temperature": 36.45 },
+    { "day": 4, "temperature": 36.5 },
+    { "day": 5, "temperature": 36.45 },
+    { "day": 6, "temperature": 36.4 },
+    { "day": 7, "temperature": 36.55 },
+    { "day": 8 },
+    { "day": 9, "temperature": 36.55 },
+    { "day": 10, "temperature": 36.7 }
+  ],
+  "expect": {
+    "evaluable": false,
+    "reasons": [{ "code": "gap_in_confirmation_window", "ruleId": "D-GAP-CONF", "day": 8 }],
+    "phases": { "preOvulatory": null, "postOvulatory": null }
+  }
+}
